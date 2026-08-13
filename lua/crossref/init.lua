@@ -11,8 +11,8 @@ function M.setup(opts)
 end
 
 function M.follow()
-  local word = vim.fn.expand("<cfile>"):gsub("^@", "")
-  local repo, path, line = word:match("^([%w-]+):([^#]+)#?L?(%d*)$")
+  local word = vim.fn.expand("<cWORD>")
+  local repo, path, line = word:match("^@([%w-]+):([^#]+)#?L?(%d*)$")
   if not repo then
     vim.cmd("norm! gf")
     return
