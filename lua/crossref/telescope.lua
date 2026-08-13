@@ -15,7 +15,7 @@ function M.setup(opts)
     require("telescope.builtin").live_grep({
       cwd = root,
       prompt_title = "Cross-Repo Refs",
-      default_text = "@",
+      default_text = "@[\\w-]+:",
       additional_args = { "--iglob", "!**/.git/**" },
       attach_mappings = function(prompt_bufnr)
         local actions = require("telescope.actions")
