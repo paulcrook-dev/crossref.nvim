@@ -1,0 +1,16 @@
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "builtin"
+hooks = [
+    { id = "trailing-whitespace" },
+    { id = "end-of-file-fixer" },
+    { id = "check-added-large-files" },
+]
+
+[[repos]]
+repo = "https://github.com/JohnnyMorganz/stylua"
+rev = "v2.0.2"
+hooks = [
+    { id = "stylua" },
+]
